@@ -2,6 +2,7 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     box-sizing: border-box;
+    color: #742305;
 }
 .container {
     display: flex;
@@ -12,7 +13,8 @@ html, body {
     }
  }
 header {
-    width: 100%;
+    width: 500px;
+    border-radius: 20px;
 }
 
 nav {
@@ -48,6 +50,9 @@ nav {
     margin: 10px;
     border-radius: 30px;
 }
+h1 {
+    color: #742305;
+}
 
 .containerCard {
     display: flex;
@@ -73,7 +78,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding: 10px;
     color: #742305;
 }
@@ -105,7 +111,7 @@ nav {
     font-weight: bold;
 }
 
-article {
+.article {
     display: flex;
     flex-wrap: wrap-reverse;
     background-color: #fef7e2;
@@ -113,7 +119,73 @@ article {
     padding: 20px;
     margin: 10px;
 }
-
-.article img {
-    width: 200px;
+.sectionArticle h2 {
+    color:  #742305;
 }
+.article img {
+    width: 100%;
+}
+
+/*cambiamenti*/
+@media screen and (max-width: 576px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav {
+        flex-wrap: wrap;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+
+    }
+    .different {
+        order:-1;
+        width: 300px;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 100%;
+    }
+    .different {
+        order:-1;
+        flex-basis: 70px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+      height: 100vh;
+      overflow: auto;
+      padding: 24px;
+    }
+    .containerCard {
+        flex-direction: row;
+        flex-basis: 30%;
+        flex-wrap: nowrap;
+    }
+}
+
+    @media screen and (min-width: 768px) and (max-width:991.9px) {
+    .card:nth-last-child(2) {
+        display:none;
+    }
+    .card:nth-last-child(3) {
+        display:none;
+    }
+}
+    
+
+@media screen and (min-width: 992px) and (max-width:1119.9px) {
+    .card:nth-last-child(3) {
+        display:none;
+    }
+}
+
